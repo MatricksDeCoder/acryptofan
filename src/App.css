@@ -1,0 +1,27 @@
+:root {
+	--bgColor    : #FEFEFA;
+	--mainGreen  : #5CB85C;
+	--mainBlue   : #5BC0DE;
+	--mainMaroon : #D9534F;
+	--mainYellow : #FED741;
+	--primaryFont: 'Rajdhani', sans-serif;
+	--secondaryFont: 'Ubuntu', sans-serif;
+	--fontSizeBig: 1.6rem;
+	--fontSizeMid: 1.2rem;
+	--fontSizeSm : 0.8rem;
+	--textColorNav  : white;
+}
+
+.fontIcon {
+	color : var(--mainBlue);
+}
+
+
+body {
+	background: white !important;
+	font-family: 'Rajdhani', sans-serif !important;
+}
+
+nav   {
+	background: gray;
+}
