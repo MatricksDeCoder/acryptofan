@@ -44,7 +44,7 @@ export const tradinginvestment =  [
 		title: "ABRA",
 		price: 0,
 		info:"A Mobile Wallet that makes digital investments easy! Invest in stocks and ETF's from anywhere using Bitcoin",
-		url:"",
+		url:"https://invite.abra.com/eq2Fm98wpU",
 		img:"https://res.cloudinary.com/matricksdecoder/image/upload/v1550321426/a_qqu55c.jpg",
 		tag: "Invest Anywhere"
 		

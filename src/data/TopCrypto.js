@@ -104,7 +104,7 @@ export const mytopcrypto =  [
 	{	id: 13,
 		title: "ZEC",
 		price: 0,
-		info: "I am no real expert on security, cryptography, zero knowledge proofs, and baking in privacy into protocol, but i know enough to understand when those who know say Zcash has stronger privacy features they are probably right. With Monero at the top of Privacy Coins, i think ZEC is undervalued. Get ZEC now from top crypto exchange!",
+		info: "I am no real expert on security, cryptography, zero knowledge proofs, and baking in privacy into protocol, but i know enough to understand when those who know say Zcash has stronger privacy features they are probably right. With Monero at the top of Privacy Coins, i think ZEC and Komodo are undervalued. Get ZEC now from top crypto exchange!",
 		url:"https://www.binance.com/?ref=36141852",
 		img:"https://res.cloudinary.com/matricksdecoder/image/upload/v1550468377/ZCash_dtlmor.jpg",
 		tag: "13. Privacy-ZCash"
