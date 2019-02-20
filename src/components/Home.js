@@ -3,6 +3,7 @@ import {ContextConsumer}   from "../Context";
 import Title               from "./Title";
 import HomeItem            from "./Resources/HomeItem";
 
+
 export default function Home() {
  
     return (
@@ -38,6 +39,7 @@ export default function Home() {
 				}
 				
 			</ContextConsumer>	
+			
 		</div>
     );
 

@@ -4,13 +4,13 @@ import './index.css';
 import App                         from './App';
 import * as serviceWorker          from './serviceWorker';
 import {BrowserRouter as Router}   from "react-router-dom";
-import {ContextProvider }          from "./Context"
+import {ContextProvider }          from "./Context";
 
 ReactDOM.render(
 	<ContextProvider>
 		<Router>
 			<App />
-		</Router>
+		</Router>		
 	</ContextProvider>, 
 	document.getElementById('root')
 );
@@ -19,3 +19,5 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: http://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+//Next stage in learning is make site faster,pagerendering, caching, managing images etc 

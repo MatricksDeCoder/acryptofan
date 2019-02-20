@@ -1,4 +1,6 @@
-export const mytopcrypto =  [
+export const cryptoInfo = 
+
+[
 	
 	{
 		id: 1,
@@ -111,7 +113,7 @@ export const mytopcrypto =  [
     },
 	
 	{	id: 14,
-		title: "BNB Coin",
+		title: "BNB",
 		price: 0,
 		info: "A token with real use and built with proper understanding of token economics! To understand more read up on classical theory of money  and velcoty of an asset! Get BNB and use on this exchange for discounts, voting rights and more",
 		url:"https://www.binance.com/?ref=36141852",
@@ -127,7 +129,7 @@ export const mytopcrypto =  [
 		tag: "15. 0x"
     },
 	{	id: 16,
-		title: "QuickX",
+		title: "QCX",
 		price: 0,
 		info: "Designed to solve blockchain prolems. Ambitious project Aims to be fastest crypto payment protocol! Solid team, advisors, partners! This is just a project i think may have potential!",
 		url:"https://www.quickx.io/register/zvi7792",

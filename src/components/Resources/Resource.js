@@ -15,7 +15,7 @@ export default function Resource({item, id, handleClick, type}) {
 				</div>
 				<div className="card-footer d-flex justify-content-between">
 					<p className="align-self-center mb-0">{item.title}</p>
-					<p className="mb-0">Price: {item.price}</p>
+					<p className="mb-0">Price: ${item.price}</p>
 				</div>
 			</div>		
 		</ResourceWrapper>

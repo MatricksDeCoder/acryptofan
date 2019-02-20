@@ -4,12 +4,12 @@ export default function LayoutText({value, name}) {
 	
 	return (
 	
-		value[name].map((obj) => {
+		value[name].map((obj,i) => {
 				return (
-					<div className= "container">
+					<div key={i} className= "container">
 						<h5>{obj.title}</h5>
-							{obj.paras.map((para) => {
-								return <p>{para}</p>
+							{obj.paras.map((para,i) => {
+								return <p key={i}>{para}</p>
 								})
 							}
 					</div>

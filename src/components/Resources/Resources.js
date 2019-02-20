@@ -34,7 +34,7 @@ export default function Resources({type}) {
 					}
 				}
 				
-			</ContextConsumer>	
+			</ContextConsumer>			
 		</div>
     );
 

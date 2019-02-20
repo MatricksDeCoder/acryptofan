@@ -2,12 +2,14 @@ import React               from 'react';
 import {Link}              from 'react-router-dom';
 import styled              from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import CookieConsent       from "react-cookie-consent";
 
 export default function NavBarTop() {
 
 		return (
 		
 			<nav className="navbar navbar-expand-lg">
+			<CookieConsent>This website uses cookies to enhance the user experience.</CookieConsent>
 			<NavWrapper>
 				<ul className="navbar-nav mr-auto mt-2 mt-lg-0">
 				  <li className="nav-item active">

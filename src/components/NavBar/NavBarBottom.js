@@ -3,11 +3,13 @@ import {Link}              from 'react-router-dom';
 import styled              from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+
 export default function NavBarBottom() {
 
 		return (
 		
-			<nav className="navbar navbar-expand-lg">			
+			<nav className="navbar navbar-expand-lg">	
+			
 			<NavWrapper>
 				<ul className="navbar-nav mr-auto ml-2 mt-0 mt-lg-0">
 				  <li className="nav-item">

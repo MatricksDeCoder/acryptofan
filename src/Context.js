@@ -14,9 +14,14 @@ import {loans}                  from "./data/Loans";
 import {cloudmining}            from "./data/CloudMining";
 import {toprated}               from "./data/TopRated";
 import {tradinginvestment}      from "./data/TradingInvestment";
-import {mytopcrypto}            from "./data/TopCrypto";
-   
+import {cryptoInfo}             from "./data/MyTopCrypto";
+
+  
 const AppContext = React.createContext();
+
+let assetPrices   = [];
+let mytopcrypto   = cryptoInfo;
+let topAssets     = mytopcrypto.map(obj=>obj.title);
 
 class ContextProvider extends Component {
 	
@@ -37,14 +42,55 @@ class ContextProvider extends Component {
 	  toprated:toprated,
 	  tradinginvestment:tradinginvestment,
 	  mytopcrypto:mytopcrypto,
-	  
+	  assetPrices: assetPrices
   }
   
-  componentDidMount() {
-	  console.log("I have mounted");
+  
+  componentDidMount() {	
+    
+	this.getData();
+	this.timer = setInterval(this.getData, 900000);
   }
   
-
+  componentWillUnmount() {
+	  clearInterval(this.timer);
+  }
+  
+  getData() {
+		
+		const API_KEY = process.env.REACT_APP_CRYPTOCOMPARE_API_KEY;
+		const url = 'https://min-api.cryptocompare.com/data/pricemulti?fsyms=' + topAssets.toString() +  '&tsyms=USD&api_key=' + API_KEY; 
+		
+		fetch(url).then(response => response.json())
+				  .then(priceData => {
+					assetPrices = topAssets.map(asset => {
+							let assetIn = priceData[asset]
+						if(assetIn) {
+							return {[asset]: priceData[asset]['USD']};
+						}else {
+							return {[asset]: asset}
+						}
+					});
+					//console.log(assetPrices);
+					mytopcrypto = mytopcrypto.map((item,i) => {
+						return {id:item.id,
+								title:item.title,
+								price:assetPrices[i][item.title],
+								info:item.info,
+								url:item.url,
+								img:item.img,
+								tag:item.tag}
+					});
+					console.log(mytopcrypto);
+					this.setState({
+						mytopcrypto:mytopcrypto
+					})
+				  })
+				  .catch(err => {
+					 console.log(err);
+				   });
+	}
+  
   getResource = (id, name) => {
 	  const resource = this.state[name].find(item => id === item.id);
 	  return resource;
@@ -62,7 +108,8 @@ class ContextProvider extends Component {
     return (
       <AppContext.Provider 
 	       value = {{...this.state,
-		             handleResource:this.handleResource
+		             handleResource:this.handleResource,
+					 assetPrices:assetPrices
 		   }}
 	   >
 		  {this.props.children}
@@ -71,6 +118,7 @@ class ContextProvider extends Component {
   }
   
 }
+
 
 const ContextConsumer = AppContext.Consumer;
 

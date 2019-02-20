@@ -1,14 +1,14 @@
 import React               from 'react';
 import {Link}              from 'react-router-dom';
 import styled              from 'styled-components';
-import CookieConsent       from "react-cookie-consent";
+
 
 export default function HomeItem({resource, name}) {
 
 	let route = "/"	+ name;
     return (
-        
 		<ResourceWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
+		    
 			<Link to = {route} >
 			<div className="card card-block bg-faded">
 			    <h5 className ="card-header text-black">{resource.title}</h5>
@@ -19,9 +19,8 @@ export default function HomeItem({resource, name}) {
 					<p className="align-self-center mb-0">{resource.tag}</p>
 				</div>
 			</div>		
-			</Link>
-			<CookieConsent>This website uses cookies to enhance the user experience.</CookieConsent>
-		</ResourceWrapper>
+			</Link>			
+		</ResourceWrapper>		
     );
 
 }

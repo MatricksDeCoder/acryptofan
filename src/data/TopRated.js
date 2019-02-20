@@ -2,7 +2,7 @@ export const toprated =  [
 	{
 		id: 1,
 		title: "BTC",
-		price: 0,
+		price: "BTC",
 		info : "I think Bitcoin will more than dominate! By far the most popular coin with highest market capitalization! With lightning network perfected Bitcoin will be the Flash of crypto. Bitcoin will continue dictate the direction of the cypto market. Get your Bitcoin now from top exchange!",
 		url : "https://www.binance.com/?ref=36141852",
 		img : "https://res.cloudinary.com/matricksdecoder/image/upload/v1550323746/Bitcoin_ni7pf2.jpg",
