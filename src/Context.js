@@ -45,7 +45,7 @@ class ContextProvider extends Component {
 	  assetPrices: assetPrices
   }
   
-  
+   
   componentDidMount() {	
     
 	this.getData();
@@ -56,11 +56,10 @@ class ContextProvider extends Component {
 	  clearInterval(this.timer);
   }
   
-  getData() {
-		
+  getData = () => {
+
 		const API_KEY = process.env.REACT_APP_CRYPTOCOMPARE_API_KEY;
 		const url = 'https://min-api.cryptocompare.com/data/pricemulti?fsyms=' + topAssets.toString() +  '&tsyms=USD&api_key=' + API_KEY; 
-		
 		fetch(url).then(response => response.json())
 				  .then(priceData => {
 					assetPrices = topAssets.map(asset => {
@@ -71,7 +70,6 @@ class ContextProvider extends Component {
 							return {[asset]: asset}
 						}
 					});
-					//console.log(assetPrices);
 					mytopcrypto = mytopcrypto.map((item,i) => {
 						return {id:item.id,
 								title:item.title,
@@ -81,14 +79,16 @@ class ContextProvider extends Component {
 								img:item.img,
 								tag:item.tag}
 					});
-					console.log(mytopcrypto);
-					this.setState({
-						mytopcrypto:mytopcrypto
-					})
+					//console.log(mytopcrypto);
+					return mytopcrypto;
 				  })
+				  .then(result => this.setState({mytopcrypto:result}))
 				  .catch(err => {
 					 console.log(err);
+
 				   });
+				   
+	
 	}
   
   getResource = (id, name) => {
