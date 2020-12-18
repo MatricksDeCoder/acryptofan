@@ -63,7 +63,7 @@ export default function NavBarTop() {
 						</Link>
 				   </li>
 				    <li className="nav-item">
-						<a className="nav-link" href="https://twitter.com/BlockchainSavv1" target="blank" rel="noopener noreferrer">
+						<a className="nav-link" href="https://twitter.com/@Zed_Blockchain" target="blank" rel="noopener noreferrer">
 							<img className="img-fluid" width="45" src="https://res.cloudinary.com/matricksdecoder/image/upload/v1550477444/Twitter_drymje.png" alt="twitter" />
 							<span className="twitter ml-1">Follow Blockchain Savvy</span>
 						</a>
